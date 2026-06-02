@@ -1,19 +1,20 @@
 import Image from "next/image";
 import SocialLinks from '@/components/SocialLinks'
 import Avatar from "@/components/Avatar";
+import ProfileCard from '@/components/ProfileCard';
 
 export default function Home() {
   return (
 
     <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
       <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-       
-        <Avatar 
-        src="https://media.tenor.com/ovnIL9_BBtIAAAAM/mike-wazowski-monsters-inc.gif" 
-        alt="david wazowski" 
-        size="lg"
-      />
-       
+
+        <ProfileCard
+          avatarSrc="https://media.licdn.com/dms/image/v2/D4E03AQHDMo1Dcy8shQ/profile-displayphoto-scale_200_200/B4EZq3mpykGUAc-/0/1764016956570?e=2147483647&v=beta&t=TK5oCeXf2wKRumyPmPpVDG4q-fid05zXMVu-A5ebcn4"
+          title="Software Engineering"
+          role="Student @ UofC"
+          className="max-w-[340px] min-h-[420px] px-8 py-12"
+        />
         <SocialLinks />
 
         <Image
