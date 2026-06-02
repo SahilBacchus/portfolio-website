@@ -24,6 +24,7 @@ export default function AboutSection(): React.JSX.Element {
                 text="Sahil Bacchus"
                 className="text-6xl font-extrabold"
                 duration={2.5}
+                once={false}
                 colors={["#60A5FA", "#A78BFA", "#F472B6"]}
               />
             </div>
