@@ -5,6 +5,7 @@ import ProfileCard from '@/components/ProfileCard';
 import AboutSection from "@/components/AboutSection";
 import ExperienceSection from "@/components/ExperienceSection";
 import ProjectsCard from "@/components/ProjectsCard";
+import ProjectsSection from "@/components/ProjectsSection";
 
 
 export default function Home() {
@@ -12,13 +13,6 @@ export default function Home() {
       <>
         <AboutSection />
         <ExperienceSection />
-
-        
-        {/* Dummy content to check the timeline scroll animation*/}
-        <AboutSection />
-        <AboutSection />
-        <AboutSection />
-
 
       <div className="mx-auto max-w-md px-4">
         <ProjectsCard
@@ -30,6 +24,8 @@ export default function Home() {
           imageSrc="/images/ai-task-breakdown-image.png"
         />
       </div>
+
+      <ProjectsSection />
 
 
       </>

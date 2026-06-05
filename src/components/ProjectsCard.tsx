@@ -13,14 +13,16 @@ export interface ProjectsCardProps {
   description: string;
   /** Technologies/tools used (will be rendered as badges) */
   technologies: string[];
-  /** URL to GitHub repository (required) */
-  githubUrl: string;
+  /** URL to GitHub repository (optional) */
+  githubUrl?: string;
   /** URL to live demo (optional – if omitted, the Live button won't appear) */
   liveUrl?: string;
   /** Optional thumbnail image URL */
   imageSrc?: string;
   /** Optional alt text for the thumbnail */
   imageAlt?: string;
+  /** Optional project highlights */
+  highlights?: string[];
   /** Additional CSS classes */
   className?: string;
 }
@@ -33,13 +35,14 @@ export default function ProjectsCard({
   liveUrl,
   imageSrc,
   imageAlt = `${title} thumbnail`,
+  highlights = [],
   className,
 }: ProjectsCardProps) {
   return (
     <div
       className={cn(
         "group relative flex h-full flex-col rounded-2xl border border-white/10 bg-slate-950/40 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl overflow-hidden",
-        className
+        className,
       )}
     >
       {/* Optional Thumbnail Image */}
@@ -69,6 +72,20 @@ export default function ProjectsCard({
           {description}
         </p>
 
+        {/* Highlights */}
+        {highlights.length > 0 && (
+          <div className="mt-4 space-y-2">
+            {highlights.slice(0, 4).map((highlight, idx) => (
+              <div
+                key={idx}
+                className="text-sm text-muted-foreground leading-relaxed"
+              >
+                {highlight}
+              </div>
+            ))}
+          </div>
+        )}
+
         {/* Tech badges */}
         <div className="mt-4 flex flex-wrap gap-2">
           {technologies.slice(0, 4).map((tech) => (
@@ -87,17 +104,20 @@ export default function ProjectsCard({
           )}
         </div>
 
-        {/* Buttons – always GitHub, optional Live */}
+        {/* Buttons – optional GitHub, optional Live */}
         <div className="mt-6 flex items-center gap-3 pt-2">
-          <a
-            href={githubUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 rounded-lg bg-primary/10 px-3 py-1.5 text-sm font-medium text-primary transition-all hover:bg-primary/20 hover:scale-105"
-          >
-            <FaGithub className="h-4 w-4" />
-            Code
-          </a>
+          {githubUrl && (
+            <a
+              href={githubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 rounded-lg bg-primary/10 px-3 py-1.5 text-sm font-medium text-primary transition-all hover:bg-primary/20 hover:scale-105"
+            >
+              <FaGithub className="h-4 w-4" />
+              Code
+            </a>
+          )}
+
           {liveUrl && (
             <a
               href={liveUrl}
