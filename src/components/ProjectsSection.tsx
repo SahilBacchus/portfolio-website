@@ -109,7 +109,7 @@ export default function ProjectsSection() {
         >
           {/* HERO */}
           <div className="md:col-span-2 md:row-span-2">
-            <ProjectsCard {...projectsData[0]} />
+            <ProjectsCard {...projectsData[0]} variant="featured" />
           </div>
 
           {/* TOP RIGHT */}

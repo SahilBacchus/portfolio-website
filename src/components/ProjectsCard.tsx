@@ -25,6 +25,8 @@ export interface ProjectsCardProps {
   highlights?: string[];
   /** Additional CSS classes */
   className?: string;
+  /** Optional layout variant for bento emphasis */
+  variant?: "default" | "featured";
 }
 
 export default function ProjectsCard({
@@ -37,6 +39,7 @@ export default function ProjectsCard({
   imageAlt = `${title} thumbnail`,
   highlights = [],
   className,
+  variant = "default",
 }: ProjectsCardProps) {
   return (
     <div
@@ -47,14 +50,25 @@ export default function ProjectsCard({
     >
       {/* Optional Thumbnail Image */}
       {imageSrc && (
-        <div className="relative h-40 w-full overflow-hidden bg-slate-800/50">
+        <div
+          className={cn(
+            "relative w-full overflow-hidden bg-slate-800/50",
+            variant === "featured" ? "flex-[1.3]" : "h-40"
+          )}
+        >
           <Image
             src={imageSrc}
             alt={imageAlt}
             fill
-            className="object-cover transition-transform duration-500 group-hover:scale-105"
-            sizes="(max-width: 768px) 100vw, 33vw"
+            className={cn(
+              "object-cover transition-transform duration-500 group-hover:scale-105",
+              variant === "featured"
+                ? "group-hover:scale-[1.03]"
+                : "group-hover:scale-105"
+            )}
+            sizes="(max-width: 768px) 100vw, 50vw"
           />
+
           {/* Subtle gradient overlay to blend with card content */}
           <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent" />
         </div>
@@ -68,7 +82,7 @@ export default function ProjectsCard({
         </h3>
 
         {/* Description */}
-        <p className="mt-2 line-clamp-3 text-sm text-muted-foreground">
+        <p className="mt-2 text-sm text-muted-foreground">
           {description}
         </p>
 
