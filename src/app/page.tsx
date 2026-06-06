@@ -27,6 +27,10 @@ export default function Home() {
 
       <ProjectsSection />
 
+      {/* Dummy content to check the project section scroll animation */}
+      <ExperienceSection />
+      <ExperienceSection />
+
 
       </>
 

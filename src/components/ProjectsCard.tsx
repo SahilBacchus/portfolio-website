@@ -1,10 +1,11 @@
 "use client";
 
-import React from "react";
+import React, { useRef } from "react";
 import Image from "next/image";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 export interface ProjectsCardProps {
   /** Project title */
@@ -41,8 +42,68 @@ export default function ProjectsCard({
   className,
   variant = "default",
 }: ProjectsCardProps) {
+  const ref = useRef<HTMLDivElement | null>(null);
+
+  /**
+   * Scroll progress tied to this card
+   *
+   * Animation completes closer to the center of the viewport
+   * so cards don't appear "finished" too early.
+   */
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start 0.9", "center 0.55"],
+  });
+
+  /**
+   * 🚀 Strong "fly up from bottom" motion
+   *
+   * Starts lower, slightly overshoots,
+   * then settles into its final position.
+   */
+  const y = useTransform(
+    scrollYProgress,
+    [0, 0.8, 1],
+    [180, -12, 0]
+  );
+
+  /**
+   * Gradual fade-in
+   */
+  const opacity = useTransform(
+    scrollYProgress,
+    [0, 0.2, 0.5, 1],
+    [0, 0.15, 0.85, 1]
+  );
+
+  /**
+   * Slight overshoot creates a more premium feel
+   */
+  const scale = useTransform(
+    scrollYProgress,
+    [0, 0.8, 1],
+    [0.85, 1.03, 1]
+  );
+
+  /**
+   * subtle 3D tilt for depth
+   */
+  const rotateX = useTransform(
+    scrollYProgress,
+    [0, 1],
+    [18, 0]
+  );
+
   return (
-    <div
+    <motion.div
+      ref={ref}
+      style={{
+        y,
+        opacity,
+        scale,
+        rotateX,
+        transformPerspective: 1200,
+      }}
       className={cn(
         "group relative flex h-full flex-col rounded-2xl border border-white/10 bg-slate-950/40 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl overflow-hidden",
         className,
@@ -74,7 +135,7 @@ export default function ProjectsCard({
         </div>
       )}
 
-      {/* Content area (same as before) */}
+      {/* Content */}
       <div className="flex flex-1 flex-col p-5">
         {/* Title */}
         <h3 className="text-xl font-bold tracking-tight text-foreground">
@@ -118,7 +179,7 @@ export default function ProjectsCard({
           )}
         </div>
 
-        {/* Buttons – optional GitHub, optional Live */}
+        {/* Buttons */}
         <div className="mt-6 flex items-center gap-3 pt-2">
           {githubUrl && (
             <a
@@ -145,6 +206,6 @@ export default function ProjectsCard({
           )}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
