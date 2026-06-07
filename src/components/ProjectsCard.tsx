@@ -114,7 +114,7 @@ export default function ProjectsCard({
         <div
           className={cn(
             "relative w-full overflow-hidden bg-slate-800/50",
-            variant === "featured" ? "flex-[1.3]" : "h-40"
+            variant === "featured" ? "aspect-[16/9]" : "h-40"
           )}
         >
           <Image
@@ -122,7 +122,7 @@ export default function ProjectsCard({
             alt={imageAlt}
             fill
             className={cn(
-              "object-cover transition-transform duration-500 group-hover:scale-105",
+              "object-cover object-top transition-transform duration-500 group-hover:scale-105",
               variant === "featured"
                 ? "group-hover:scale-[1.03]"
                 : "group-hover:scale-105"
