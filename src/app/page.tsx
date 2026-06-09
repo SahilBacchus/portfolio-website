@@ -7,6 +7,7 @@ import ExperienceSection from "@/components/ExperienceSection";
 import ProjectsCard from "@/components/ProjectsCard";
 import ProjectsSection from "@/components/ProjectsSection";
 import TechStack from "@/components/TechStack";
+import EducationSection from "@/components/EducationSection";
 
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
       <>
         <AboutSection />
         <ExperienceSection />
+        <EducationSection />
         <TechStack />
         <ProjectsSection />
 
