@@ -1,5 +1,6 @@
 import { Badge } from "@/components/ui/badge";
 import { Calendar } from "lucide-react";
+import Image from "next/image";
 
 export default function EducationSection() {
   const coursework = [
@@ -23,9 +24,11 @@ export default function EducationSection() {
         <div className="flex gap-6">
           {/* Logo */}
           <div className="flex h-24 w-24 shrink-0 items-center justify-center rounded-xl bg-white p-3">
-            <img
-              src="images/schulich-eng-logo.jpg"
+            <Image
+              src="/images/schulich-eng-logo.jpg"
               alt="Schulich School of Engineering"
+              width={96}
+              height={96}
               className="h-full w-full object-contain"
             />
           </div>
