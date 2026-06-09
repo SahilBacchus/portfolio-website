@@ -73,7 +73,7 @@ const skillsData = [
 export default function TechStack() {
   return (
     <section className="w-full bg-background py-16 text-foreground">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="max-w-2xl mb-12">
           <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">

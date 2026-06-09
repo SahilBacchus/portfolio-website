@@ -94,14 +94,16 @@ export default function ProjectsSection() {
     <section className="w-full bg-background text-foreground py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="max-w-2xl mb-12">
-          <h2 className="text-3xl font-extrabold text-foreground sm:text-4xl tracking-tight">
-            Featured Projects
-          </h2>
-          <p className="mt-3 text-lg text-muted-foreground">
-            From full-stack applications to embedded systems and ML pipelines,
-            here’s what I’ve been building.
-          </p>
+        <div className="xl:max-w-5xl xl:mx-auto">
+          <div className="max-w-2xl mb-12">
+            <h2 className="text-3xl font-extrabold text-foreground sm:text-4xl tracking-tight">
+              Featured Projects
+            </h2>
+            <p className="mt-3 text-lg text-muted-foreground">
+              From full-stack applications to embedded systems and ML pipelines,
+              here’s what I’ve been building.
+            </p>
+          </div>
         </div>
 
         {/* Asymmetric Bento Grid */}
@@ -142,7 +144,6 @@ export default function ProjectsSection() {
           <div className="md:col-span-2 md:row-span-1">
             <ProjectsCard {...projectsData[5]} />
           </div>
-
         </div>
       </div>
     </section>
