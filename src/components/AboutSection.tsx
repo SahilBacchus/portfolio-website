@@ -25,7 +25,7 @@ export default function AboutSection(): React.JSX.Element {
                 className="text-6xl font-extrabold"
                 duration={2.5}
                 once={false}
-                colors={["#60A5FA", "#A78BFA", "#F472B6"]}
+                colors={["#2b7dfb", "#706fff", "#a84cff"]}
               />
             </div>
             <div className="space-y-5 text-lg leading-8 text-muted-foreground max-w-2xl">
