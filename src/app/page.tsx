@@ -8,6 +8,7 @@ import ProjectsCard from "@/components/ProjectsCard";
 import ProjectsSection from "@/components/ProjectsSection";
 import TechStack from "@/components/TechStack";
 import EducationSection from "@/components/EducationSection";
+import ContactSection from "@/components/ContactSection";
 
 
 export default function Home() {
@@ -18,9 +19,8 @@ export default function Home() {
         <EducationSection />
         <TechStack />
         <ProjectsSection />
+        <ContactSection />
 
-        {/* Dummy content to check the project section scroll animation */}
-        <div className="h-64"></div>
 
 
       </>
