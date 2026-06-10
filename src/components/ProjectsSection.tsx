@@ -12,7 +12,7 @@ const projectsData = [
     githubUrl: "https://github.com/SahilBacchus/ai-task-breakdown",
     liveUrl: "https://ai-task-breakdown-frontend.vercel.app/",
     imageSrc: "/images/ai-task-breakdown-image.png",
-    className: "border-violet-800/40 border-6",
+    className: "border-violet-800/40 border-4",
     highlights: [
       "🧠 Gemini-powered task decomposition into Kanban boards",
       "💬 Natural language chat interface for task editing",
@@ -26,7 +26,7 @@ const projectsData = [
       "Multi-agent LLM pipeline coordinating market data, SEC filings, and news into structured equity research briefs.",
     technologies: ["LangChain", "LangGraph", "Ollama"],
     githubUrl: "https://github.com/SahilBacchus/stock-brief",
-    className: "border-emerald-800/40 border-6",
+    className: "border-emerald-800/40 border-4",
     highlights: [
       "🤖 Multi-agent LangGraph orchestration system",
       "📄 Automates SEC + news + market data synthesis",
@@ -39,7 +39,7 @@ const projectsData = [
       "Edge-optimized CNN achieving high accuracy with reduced latency using depthwise separable convolutions.",
     technologies: ["PyTorch", "FastAPI", "Docker", "AWS"],
     githubUrl: "https://github.com/SahilBacchus/edge-vision-cnn",
-    className: "border-blue-800/40 border-6",
+    className: "border-blue-800/40 border-4",
     highlights: [
       "🧬 MobileNet-style depthwise separable CNN",
       "📈 >91% CIFAR-10 accuracy",
@@ -53,7 +53,7 @@ const projectsData = [
       "ML algorithms implemented from scratch in RISC-V assembly for deep understanding of fundamentals.",
     technologies: ["Python", "C", "RISC-V Assembly"],
     githubUrl: "https://github.com/SahilBacchus/ml-in-assembly",
-    className: "border-amber-800/40 border-6",
+    className: "border-amber-800/40 border-4",
     highlights: [
       "🧮 Linear regression, gradient descent, perceptron in assembly",
       "📚 Jupyter notebooks connecting math → implementation",
@@ -65,7 +65,7 @@ const projectsData = [
     description:
       "Embedded productivity device with gamified breaks designed for focus and accessibility.",
     technologies: ["MicroPython", "Embedded Systems"],
-    className: "border-rose-800/40 border-6",
+    className: "border-rose-800/40 border-4",
     highlights: [
       "🍅 Pomodoro timer + Space Invaders-style break game",
       "🧠 Designed for neurodiverse students",
@@ -79,7 +79,7 @@ const projectsData = [
       "Java-based flight booking system with role-based access control and full CRUD functionality for flights and bookings.",
     technologies: ["Java", "Swing", "MySQL"],
     githubUrl: "https://github.com/Jibran-Som/FlightReservationSystem",
-    className: "border-cyan-800/40 border-6",
+    className: "border-cyan-800/40 border-4",
     highlights: [
       "🔐 Role-based access control for customers, agents, and admins",
       "✈️ Flight search, booking management, and CRUD operations",
