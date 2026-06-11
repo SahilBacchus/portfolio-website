@@ -14,13 +14,13 @@ interface SocialItem {
 const socialData: SocialItem[] = [
   { 
     name: 'GitHub', 
-    url: 'https://github.com', 
+    url: 'https://github.com/SahilBacchus', 
     icon: FaGithub, 
     hoverColor: 'hover:text-white' 
   },
   { 
     name: 'LinkedIn', 
-    url: 'https://linkedin.com', 
+    url: 'https://www.linkedin.com/in/sahil-bacchus/', 
     icon: FaLinkedin, 
     hoverColor: 'hover:text-[#0077b5]' 
   },
