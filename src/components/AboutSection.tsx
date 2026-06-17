@@ -10,7 +10,7 @@ export default function AboutSection(): React.JSX.Element {
         <div className="grid grid-cols-1 md:grid-cols-[380px_1fr] gap-16">
           {/* LEFT COLUMN */}
           <ProfileCard
-            avatarSrc="https://media.licdn.com/dms/image/v2/D4E03AQHDMo1Dcy8shQ/profile-displayphoto-scale_200_200/B4EZq3mpykGUAc-/0/1764016956570?e=2147483647&v=beta&t=TK5oCeXf2wKRumyPmPpVDG4q-fid05zXMVu-A5ebcn4"
+            avatarSrc="/images/profile-pic.jpg"
             title="Software Engineering"
             role="Student @ UofC"
             className="max-w-[360px] min-h-[460px] px-8 py-12"
