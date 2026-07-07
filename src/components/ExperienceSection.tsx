@@ -10,6 +10,7 @@ const experienceData = [
     company: "BES Engineering",
     location: "Calgary, Alberta",
     logo: "/images/beseng-logo.png",
+    url: "https://www.beseng.ca",
     highlights: [
       "Architected and deployed a production Next.js web application using TypeScript and React Server Components, developing reusable frontend components, backend serverless workflows, and deployment configurations.",
       "Engineered a secure lead generation pipeline integrating Cloudflare Turnstile, server-side Zod validation, and transactional email APIs to ensure reliable user input processing while preventing automated spam with zero friction."
@@ -28,6 +29,7 @@ const experienceData = [
     company: "BES Engineering",
     location: "Calgary, Alberta",
     logo: "/images/beseng-logo.png",
+    url: "https://www.beseng.ca",
     highlights: [
       "Spearheaded creation of an XGBoost market predictor trained on 60M+ data points to optimize limit order pricing.",
       "Managed a diversified equity portfolio, identifying short-term market mispricing opportunities during periods of elevated volatility.",
@@ -48,6 +50,7 @@ const experienceData = [
     company: "BES Engineering",
     location: "Calgary, Alberta",
     logo: "/images/beseng-logo.png",
+    url: "https://www.beseng.ca",
     highlights: [
       "Collaborated with senior engineers to create and markup electrical drawings for midstream oil & gas infrastructure, including single-line diagrams, motor schematics, PLC layouts, and control panels for low-voltage power systems.",
       "Performed grounding studies using ETAP for 4.16 kV systems, calculating grounding requirements to mitigate electrical shock hazards.",

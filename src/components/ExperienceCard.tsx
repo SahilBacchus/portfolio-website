@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { Building2 } from "lucide-react";
+import { Building2, ExternalLink } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
 interface ExperienceCardProps {
@@ -10,6 +10,7 @@ interface ExperienceCardProps {
   highlights: string[];
   skills: string[];
   logo?: string;
+  url?: string;
 }
 
 export default function ExperienceCard({
@@ -19,6 +20,7 @@ export default function ExperienceCard({
   highlights,
   skills,
   logo,
+  url,
 }: ExperienceCardProps) {
   return (
     <div className="group relative pr-4">
@@ -44,8 +46,20 @@ export default function ExperienceCard({
             {role}
           </h3>
 
-          <p className="mt-1 font-medium text-primary">
-            {company}
+          <p className="mt-1">
+            {url ? (
+              <a
+                href={url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1 font-medium text-primary hover:underline"
+              >
+                {company}
+                <ExternalLink className="h-3 w-3" />
+              </a>
+            ) : (
+              <span className="font-medium text-primary">{company}</span>
+            )}
           </p>
 
           <p className="mt-1 text-xs md:text-sm font-medium text-muted-foreground">
