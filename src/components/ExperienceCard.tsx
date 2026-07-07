@@ -25,14 +25,14 @@ export default function ExperienceCard({
       {/* Job Header */}
       <div className="mb-4 flex gap-4">
         {/* Company Logo */}
-        <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-xl border border-border bg-card p-2">
+        <div className="flex h-16 w-16 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-border bg-card">
           {logo ? (
             <Image
               src={logo}
               alt={`${company} logo`}
               width={64}
               height={64}
-              className="h-full w-full object-contain"
+              className="h-full w-full object-cover"
             />
           ) : (
             <Building2 className="h-8 w-8 text-muted-foreground" />
