@@ -5,10 +5,29 @@ import ExperienceCard from "./ExperienceCard";
 // EXPERIENCE DATA: Centralized source of truth for timeline entries
 const experienceData = [
   {
-    period: "October 2022 - Present",
-    role: "Financial Analyst",
-    company: "2012762 Alberta Ltd",
+    period: "Jun 2026 – Present",
+    role: "Software Developer",
+    company: "BES Engineering",
     location: "Calgary, Alberta",
+    logo: "/images/beseng-logo.png",
+    highlights: [
+      "Architected and deployed a production Next.js web application using TypeScript and React Server Components, developing reusable frontend components, backend serverless workflows, and deployment configurations.",
+      "Engineered a secure lead generation pipeline integrating Cloudflare Turnstile, server-side Zod validation, and transactional email APIs to ensure reliable user input processing while preventing automated spam with zero friction."
+    ],
+    skills: [
+      "Next.js",
+      "TypeScript",
+      "React",
+      "Zod",
+      "Cloudflare",
+    ]
+  },
+  {
+    period: "Oct 2022 – Jun 2026",
+    role: "Financial Analyst",
+    company: "BES Engineering",
+    location: "Calgary, Alberta",
+    logo: "/images/beseng-logo.png",
     highlights: [
       "Spearheaded creation of an XGBoost market predictor trained on 60M+ data points to optimize limit order pricing.",
       "Managed a diversified equity portfolio, identifying short-term market mispricing opportunities during periods of elevated volatility.",
@@ -24,12 +43,13 @@ const experienceData = [
     ]
   },
   {
-    period: "October 2022 - Present",
+    period: "Oct 2022 – Jun 2026",
     role: "Junior Electrical Designer",
-    company: "2012762 Alberta Ltd",
+    company: "BES Engineering",
     location: "Calgary, Alberta",
+    logo: "/images/beseng-logo.png",
     highlights: [
-      "Collaborated with senior engineers to develop and markup electrical drawings including single-line diagrams, motor schematics, PLC layouts, and control panels for 480V power systems.",
+      "Collaborated with senior engineers to create and markup electrical drawings for midstream oil & gas infrastructure, including single-line diagrams, motor schematics, PLC layouts, and control panels for low-voltage power systems.",
       "Performed grounding studies using ETAP for 4.16 kV systems, calculating grounding requirements to mitigate electrical shock hazards.",
       "Executed fugitive emission studies for gas process facilities to determine hazardous area classifications and compliance requirements."
     ],
