@@ -77,7 +77,7 @@ export default function ExperienceSection() {
     <section className="w-full bg-background text-foreground py-16">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="max-w-2xl mb-12">
+        <div className="max-w-2xl mb-12 md:mb-0">
           <h2 className="text-3xl font-extrabold text-foreground sm:text-4xl tracking-tight">
             Work Experience
           </h2>
