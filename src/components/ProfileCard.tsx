@@ -28,7 +28,7 @@ export default function ProfileCard({
         -z-10 moves it behind your profile elements.
         pointer-events-none makes sure your clicks pass straight to the social buttons.
       */}
-      <div className="absolute inset-0 -z-10 pointer-events-none opacity-40">
+      <div className="absolute inset-0 -z-10 pointer-events-none opacity-60">
         <DarkVeil hueShift={15} speed={0.8} />
       </div>
 
