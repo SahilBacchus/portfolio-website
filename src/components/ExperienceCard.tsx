@@ -1,4 +1,6 @@
 import React from "react";
+import Image from "next/image";
+import { Building2 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
 interface ExperienceCardProps {
@@ -7,6 +9,7 @@ interface ExperienceCardProps {
   location: string;
   highlights: string[];
   skills: string[];
+  logo?: string;
 }
 
 export default function ExperienceCard({
@@ -15,17 +18,40 @@ export default function ExperienceCard({
   location,
   highlights,
   skills,
+  logo,
 }: ExperienceCardProps) {
   return (
     <div className="group relative pr-4">
       {/* Job Header */}
-      <div className="mb-4">
-        <h3 className="text-xl md:text-2xl font-bold text-foreground tracking-tight">
-          {role} <span className="text-primary">@ {company}</span>
-        </h3>
-        <p className="text-xs md:text-sm font-medium text-muted-foreground mt-1">
-          {location}
-        </p>
+      <div className="mb-4 flex gap-4">
+        {/* Company Logo */}
+        <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-xl border border-border bg-card p-2">
+          {logo ? (
+            <Image
+              src={logo}
+              alt={`${company} logo`}
+              width={64}
+              height={64}
+              className="h-full w-full object-contain"
+            />
+          ) : (
+            <Building2 className="h-8 w-8 text-muted-foreground" />
+          )}
+        </div>
+
+        <div>
+          <h3 className="text-xl md:text-3xl font-bold text-foreground tracking-tight">
+            {role}
+          </h3>
+
+          <p className="mt-1 font-medium text-primary">
+            {company}
+          </p>
+
+          <p className="mt-1 text-xs md:text-sm font-medium text-muted-foreground">
+            {location}
+          </p>
+        </div>
       </div>
 
       {/* Bullet Points of Experience Highlights */}
