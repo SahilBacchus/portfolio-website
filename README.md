@@ -33,6 +33,10 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 </details>
 
+## 📄 License
+
+This source code is available to view for educational and inspirational purposes. Please refer to the [LICENSE](LICENSE) file for full terms and usage permissions.
+
 ## 🙏 Acknowledgements
 
 A few open-source projects that helped bring this portfolio to life:
