@@ -5,6 +5,18 @@ import ExperienceCard from "./ExperienceCard";
 // EXPERIENCE DATA: Centralized source of truth for timeline entries
 const experienceData = [
   {
+    period: "Jul 2026 – Present",
+    role: "Research Associate",
+    company: "University of Calgary",
+    location: "Calgary, Alberta",
+    logo: "",
+    url: "https://www.ucalgary.ca/",
+    highlights: [
+    ],
+    skills: [
+    ]
+  },
+  {
     period: "Jun 2026 – Present",
     role: "Software Developer",
     company: "BES Engineering",
